@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - name: List code
-        run: find `pwd` -type f
       - name: Install dependencies
         run: |
           npx playwright install-deps
@@ -17,3 +15,9 @@ jobs:
           npm install
       - name: Run tests
         run: npm test
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test-artifacts
+          path: test-results/
