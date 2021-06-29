@@ -9,7 +9,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: List code
-        run: find . -type f
+        run: find `pwd` -type f
       - name: Install dependencies
         run: npm install
       - name: Run tests
