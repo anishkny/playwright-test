@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "playwright test --browser all"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3"
+  }
+}
