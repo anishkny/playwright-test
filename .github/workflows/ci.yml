@@ -10,9 +10,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          npx playwright install-deps
-          npx playwright install
-          npm install
+          time npx playwright install-deps
+          time npx playwright install
+          time npm install
       - name: Run tests
         run: npm test
       - name: Upload artifacts
